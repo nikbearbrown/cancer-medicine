@@ -1,149 +1,177 @@
-# Invasion: How Cancer Leaves Its Tissue
+# Chapter 3 — Invasion: How Cancer Leaves Its Tissue
+*The single cellular crossing that turns a curable lesion into a lethal one.*
 
-## Learning Objectives
+Two women are diagnosed with the same cell type in the same organ on the same day. The cells are malignant in both cases. The genetics are nearly identical. Under the microscope you could mix up the slides. One woman will almost certainly be alive in five years. The other may not be.
 
-After working through this chapter, you should be able to:
+The difference is not which genes are mutated. It is whether a small number of cells have crossed a membrane.
 
-1. **Explain** why local invasion through the basement membrane is the molecular event that separates a curable *in situ* carcinoma from a potentially lethal invasive one.
-2. **Describe** the epithelial-mesenchymal transition (EMT), identify its core molecular hallmark, and **trace** how the EMT transcription factors repress E-cadherin.
-3. **Analyze** the miR-200/ZEB feedback loop and **explain** why double-negative feedback produces a bistable switch and an EMT spectrum.
-4. **Relate** the matrix metalloproteinase (MMP)–TIMP balance to basement-membrane breach, and **evaluate** why broad-spectrum MMP inhibitors failed in clinical trials.
-5. **Distinguish** the modes of cancer-cell migration (single-cell mesenchymal, amoeboid, collective) and **predict** which might evade a given anti-invasion strategy.
+That is the central fact of invasion biology, and it is worth sitting with before we discuss any molecules: the event that changes a survivable disease into a potentially fatal one is not the accumulation of more mutations, not the growth of a bigger mass, not the recruitment of more blood vessels — it is a single discrete capacity, the capacity to *leave*. Most cancer cells cannot do this. They proliferate, pile on top of each other, fill a duct or a gland, and stay put. A small minority — sometimes a handful in a tumor of millions — acquire the machinery to detach, chew through the barrier in front of them, and crawl into the surrounding tissue. Those cells are what kills patients. Every other cellular event in cancer — the uncontrolled division, the metabolic reprogramming, the immune evasion — matters primarily because it eventually produces, or enables, or is accompanied by, invasion. Understanding what makes a cell mobile is understanding what makes a cancer lethal.
 
-## Opening Case
+---
 
-A 49-year-old woman has a screening mammogram showing microcalcifications. Biopsy returns **ductal carcinoma *in situ* (DCIS)** — malignant epithelial cells filling a breast duct but contained entirely behind an intact basement membrane. Her five-year survival approaches 100%. She is, by any reasonable definition, curable.
+### The barrier and what it means to cross it
 
-Down the hall, a second woman with the same cell type — the same malignant epithelium — has a tumor in which a small fraction of cells have crossed the basement membrane and infiltrated the surrounding stroma. Her diagnosis is **invasive ductal carcinoma**, and a subset of those invasive cells may already be traveling. Her prognosis depends entirely on whether they have spread.
+Most solid cancers arise in **epithelial** tissue — the cells that line surfaces (skin, gut, lung, bladder) and form glands (breast, prostate, pancreas). Epithelial cells are organized, polarized, and stationary. They have a defined apical surface facing the lumen and a basolateral surface anchored to the **basement membrane** — a thin but specialized sheet of type IV collagen, laminin, and nidogen that underlies every epithelium in the body. Epithelial cells are glued to each other by tight junctions and adherens junctions and locked to the basement membrane through integrins. They form sheets. They maintain architecture. Individually motile behavior is not part of their job description.
 
-The genetics of these two tumors can be nearly identical. The cells look almost the same under the microscope. What separates a near-certain cure from a potentially fatal disease is a single discrete cellular *capacity*: the ability to invade — to detach, degrade the barrier in front, and crawl through tissue. Most cancer cells in any tumor cannot do this. They proliferate and pile up but stay put. A small minority — sometimes a handful in a tumor of ten million — acquire the machinery to leave. That minority is what kills patients. This chapter asks the question that organizes invasion biology: *what makes a cancer cell mobile?*
+The basement membrane is not just a structural mat. It is a **signaling boundary** — one side sends one set of messages, the other side sends different ones. Epithelial cells are tuned to the signals from below the basement membrane, not the signals from above it. Cross the membrane, and you are in a different chemical environment. Cross the membrane, and you have *invaded*.
 
-## Core Concepts
+Carcinoma *in situ* — the breast lesion called DCIS, the cervical lesion called CIN, the colonic lesion before it breaks through the muscularis mucosae — means malignant cells filling a compartment but held behind an intact basement membrane. Five-year survival for DCIS approaches 100%. The cells are genetically malignant. They are not clinically lethal. The instant some cells breach that membrane and enter the surrounding stroma, the diagnosis changes, the staging changes, and the survival statistics change.
 
-### The barrier that defines invasion
+The job of this chapter is to explain, mechanistically, how a cell acquires the ability to make that crossing — and why it is so hard to stop.
 
-Most solid cancers arise from **epithelial** tissue — the cells that line surfaces (skin, gut, lung) and form glands (breast, prostate, pancreas). Epithelial cells are organized, polarized, and stationary. They have a defined **apical** surface (facing the lumen) and **basolateral** surface (facing neighbors and the basement membrane). They are glued to each other by **tight junctions**, **adherens junctions**, and **desmosomes**, and anchored to the **basement membrane** (a specialized extracellular-matrix sheet of type IV collagen, laminin, and nidogen) through **integrins** and hemidesmosomes. They form sheets that maintain organ architecture.
+<!-- → [DIAGRAM: cross-section of a breast duct — left side showing DCIS (malignant cells filling duct, basement membrane intact), right side showing invasive carcinoma (cells breaching membrane, entering stroma). Label the basement membrane (type IV collagen layer), the in situ cells, the invasive front, and the stromal fibroblasts on the invasive side.] -->
 
-The basement membrane is the barrier. Epithelial cells normally never cross it. *Crossing it is the molecular event that defines the transition from in situ carcinoma to invasive carcinoma* — exactly the difference between the two patients in the opening case (Liotta, 1986). To cross, a cancer cell needs three capabilities, which the rest of this chapter develops in turn: it must loosen its attachments to its neighbors (EMT), degrade the matrix in its path (MMPs), and physically crawl (cytoskeletal reorganization).
+---
 
-### Epithelial-mesenchymal transition
+### What it takes to invade: three problems to solve
 
-**Mesenchymal cells** are the opposite of epithelial: loose, individually motile, lacking strict apical-basal polarity. Fibroblasts are the canonical example — they migrate through tissue and remodel matrix. The **epithelial-mesenchymal transition (EMT)** is a developmental program by which an epithelial cell sheds its epithelial character and acquires mesenchymal character (Thiery, 2002). EMT is essential and normal in embryogenesis — gastrulation, neural crest migration, and heart-valve formation all require it. *Cancers reactivate this developmental program inappropriately.* A cancer cell that undergoes EMT weakens its junctions, loses polarity, reorganizes its cytoskeleton, and gains migratory capacity. It can then detach from the mass and invade.
+A cancer cell sitting in a mass wants to cross into surrounding tissue. It faces three distinct problems, and it needs solutions to all three at once.
 
-The molecular markers track the transition:
+**First: it has to let go.** Epithelial cells are aggressively attached to each other and to the matrix. The molecular glue is **E-cadherin** — a transmembrane protein whose extracellular domain hooks to the E-cadherin on the adjacent cell and whose cytoplasmic tail anchors to the actin cytoskeleton through β-catenin. A cell that has full E-cadherin function cannot meaningfully detach. It is, quite literally, stuck. So before anything else, the cell has to weaken those bonds.
 
-| Lost in EMT (epithelial) | Gained in EMT (mesenchymal) |
+**Second: it has to cut through.** Even after letting go of neighbors, the cell faces the basement membrane and then the dense extracellular matrix of the stroma — a cross-linked web of collagen, laminin, fibronectin, and proteoglycans that is not permeable to a cell-sized object. The cell needs enzymes that degrade this web fast enough to make a path, targeted enough to open a channel rather than just dissolve everything uniformly.
+
+**Third: it has to move.** Crawling through tissue is not passive. It requires a coordinated machinery: protrude the front, grip the new surface, pull the body forward, release the rear. Cells that have never done this before have to reorganize their internal cytoskeleton into something resembling a motility engine.
+
+These three requirements are fulfilled, in many invasive cancers, by a single developmental program that solves all three problems simultaneously. That program is the epithelial-mesenchymal transition.
+
+---
+
+### Epithelial-mesenchymal transition: the cell becomes something else
+
+**Mesenchymal cells** are the antipodes of epithelial cells. A fibroblast, the canonical mesenchymal cell, has no fixed apical-basal polarity, no tight junctions, no sheet organization, and no stable anchorage to a membrane. It migrates. It remodels matrix. It is, constitutively, what an epithelial cell needs to transiently become in order to invade.
+
+The **epithelial-mesenchymal transition (EMT)** is a program in which an epithelial cell sheds its epithelial character and acquires mesenchymal character. This is not a cancer invention. In embryogenesis, EMT is essential and precisely controlled: neural crest cells that will form cranial bone and peripheral neurons migrate from the dorsal neural tube via EMT; the mesoderm of the early embryo is laid down via gastrulation, which requires EMT; heart valves form from endocardial cells that undergo EMT. These are some of the most important cell movements in development. Cancers do not invent EMT — they steal it, reactivating a developmental program that was supposed to be shut down in adult tissue.
+
+The molecular hallmarks track a predictable switch:
+
+| Lost in EMT | Gained in EMT |
 |---|---|
-| E-cadherin (adherens-junction glue) | N-cadherin (weaker, dynamic adhesion) |
-| Cytokeratins (epithelial filaments) | Vimentin (mesenchymal filament) |
-| Claudins, occludins (tight junctions) | Fibronectin (matrix protein) |
-| EpCAM (epithelial adhesion molecule) | Smooth-muscle actin (context-dependent) |
+| E-cadherin (adherens junction) | N-cadherin (weaker, dynamic) |
+| Cytokeratins (epithelial cytoskeleton) | Vimentin (mesenchymal cytoskeleton) |
+| Claudins, occludins (tight junctions) | Fibronectin |
+| EpCAM | Smooth-muscle actin (context-dependent) |
 
-The single most consequential change is **loss of E-cadherin** — the molecular glue holding epithelial cells in organized sheets. Its cytoplasmic tail binds **β-catenin**, which links to the actin cytoskeleton. When E-cadherin is lost, two things happen at once: the cells lose tight cell-cell adhesion *and* the β-catenin that was tethered at junctions is freed to enter the nucleus and drive Wnt-pathway transcription of pro-proliferative, pro-invasive genes. So E-cadherin loss does not merely unstick cells — it actively signals (Thiery, 2002).
+The loss of E-cadherin is the most consequential single event in this table, and not only because it removes the glue. The cytoplasmic tail of E-cadherin sequesters **β-catenin**. When E-cadherin is lost, β-catenin is released into the cytoplasm and can translocate to the nucleus, where it drives Wnt-pathway transcription of genes that are pro-proliferative and pro-invasive. E-cadherin loss does not just unstick cells from each other — it simultaneously activates a signaling cascade that tells the cell to proliferate and invade. One molecular event, two consequences.
 
-In some cancers, E-cadherin (*CDH1*) is mutated directly: about half of lobular breast carcinomas carry biallelic *CDH1* inactivation, and germline *CDH1* mutation causes hereditary diffuse gastric cancer. But in most EMT, E-cadherin is silenced by *transcriptional repression*, not mutation — the work of the EMT transcription factors.
+In a minority of cancers, E-cadherin is silenced by direct mutation of the gene *CDH1*: roughly half of lobular breast carcinomas have biallelic *CDH1* inactivation, and germline *CDH1* mutation causes hereditary diffuse gastric cancer. But in the majority of EMT-driven invasion, E-cadherin is not mutated — it is *transcriptionally repressed*. The gene is intact; it is simply not being read. That repression is the work of a small family of transcription factors that function as EMT switches.
 
-<!-- → [DIAGRAM: epithelial cell → EMT → mesenchymal cell, showing junction disassembly, E-cadherin→N-cadherin cadherin switch, β-catenin release to the nucleus, and acquisition of migratory front-back polarity] -->
+<!-- → [DIAGRAM: epithelial cell undergoing EMT — show junction disassembly, E-cadherin loss, β-catenin release and nuclear translocation, acquisition of vimentin and front-back polarization, N-cadherin appearing at the new leading edge. This is a before/after schematic, not a pathway diagram.] -->
 
-### The EMT transcription factors
+---
 
-A small family of transcription factors switches EMT on by repressing E-cadherin and activating mesenchymal genes:
+### The transcription factors that throw the switch
 
-- **SNAI1 (Snail) and SNAI2 (Slug)** — zinc-finger factors that bind E-boxes in the *CDH1* promoter and recruit chromatin-modifying complexes to silence E-cadherin.
-- **ZEB1 and ZEB2** — zinc-finger E-box-binding factors that repress E-cadherin and activate vimentin. They are central to cancer EMT and form the feedback loop described below.
-- **TWIST1 and TWIST2** — basic helix-loop-helix factors driving E-cadherin repression in many cancers.
+A small number of transcription factors repress E-cadherin and activate mesenchymal gene expression. They are collectively called the EMT transcription factors, and they represent the immediate answer to the question "what turns EMT on in cancer."
 
-These factors are induced by a convergence of upstream signals: **TGF-β** (the dominant inducer in many contexts, acting through SMAD transcription factors), **Wnt** (through β-catenin), **Notch**, **receptor tyrosine kinases** (EGFR, HGF/MET, FGF, PDGF acting through Ras-MAPK and PI3K-AKT), and **hypoxia** (through HIF-1α — linking back to the angiogenesis chapters: the same hypoxia that drives VEGF also drives EMT). *EMT is not a single signal but a convergence.* In a tumor with stromal TGF-β, outpaced blood supply causing hypoxia, and oncogenic kinase signaling, EMT is multiply driven, and individual cells transition asynchronously — producing a heterogeneous pool, some of which acquire metastatic capacity.
+**SNAI1 (Snail)** and **SNAI2 (Slug)** are zinc-finger proteins that bind E-box sequences in the *CDH1* promoter and recruit chromatin-modifying complexes — histone deacetylases, the PRC2 complex — to silence the gene. They are among the fastest responders: TGF-β can induce Snail expression within hours, and Snail-mediated E-cadherin repression follows shortly after.
 
-### Partial EMT and the EMT spectrum
+**ZEB1** and **ZEB2** are also zinc-finger E-box-binding factors, and they are the central players in the regulatory architecture that controls the *stability* of the EMT state — which matters enormously, as I will explain in a moment.
 
-The textbook binary — fully epithelial flips to fully mesenchymal — has been refined. Most cancer cells undergoing EMT *in vivo* achieve only **partial EMT**: they keep some epithelial features (residual E-cadherin, cytokeratin) while gaining mesenchymal ones (vimentin, motility, invasiveness). And the partial-EMT cells appear to be *the most metastatic* (Nieto et al., 2016). Why? They retain enough adhesion to migrate as small protected clusters rather than lone cells, and they retain the **plasticity** to reverse course — to undergo **mesenchymal-epithelial transition (MET)** and re-epithelialize at a distant site, which is required to seed and grow a metastasis.
+**TWIST1** and **TWIST2** are basic helix-loop-helix factors that drive E-cadherin repression in many carcinomas, particularly in aggressive triple-negative breast cancer and in head-and-neck cancers.
 
-The mechanism enforcing intermediate states is the **miR-200/ZEB double-negative feedback loop**. The microRNA family **miR-200** represses **ZEB1/2**; ZEB1/2 in turn represses miR-200 transcription. Two mutual repressors create a **bistable switch**: the system settles into either high-miR-200/low-ZEB (epithelial) or low-miR-200/high-ZEB (mesenchymal), resisting intermediate noise — but tunable, by the strength of incoming EMT signals, into stable *partial* states. This is why EMT behaves as a *spectrum* rather than a toggle, confirmed by single-cell RNA sequencing showing many coexisting EMT states within one tumor.
+These factors are induced by a convergence of signals from the tumor environment: **TGF-β** is the dominant inducer in most contexts, acting through SMAD transcription factors. **Wnt** signaling, through β-catenin, induces EMT transcription factors and is itself potentiated by E-cadherin loss — a positive feedback. **Notch** signaling drives EMT in pancreatic and other carcinomas. Receptor tyrosine kinases — EGFR, MET (the HGF receptor), FGFR, PDGFR — activate EMT through Ras-MAPK and PI3K-AKT signaling. And **hypoxia**, through HIF-1α, induces Twist and other EMT factors — connecting the angiogenesis chapter to this one: the same oxygen deprivation that drives VEGF production also drives invasion.
 
-### Matrix metalloproteinases and ECM degradation
+The word "convergence" here is deliberate. No single pathway drives EMT in cancer; many pathways feed the same downstream factors. This is why EMT is so difficult to block with a single drug — there are too many entry points into the program. And because these signals arrive at different intensities in different cells within the same tumor, different cells transition at different times and to different extents. The result is a heterogeneous population, some cells fully epithelial, some partially transitioned, some more completely mesenchymal. And — here is the counterintuitive finding — the most metastatic cells are *not* the fully mesenchymal ones.
 
-To pass through tissue, a cell must chew through the **extracellular matrix (ECM)** — the dense protein-and-polysaccharide network filling tissue (collagen, laminin, fibronectin, proteoglycans). The enzymes that degrade it are the **matrix metalloproteinases (MMPs)** — a family of 23 zinc-dependent proteases. Key players in invasion: the **gelatinases MMP-2 and MMP-9** (which cleave the type IV collagen of the basement membrane) and the **membrane-type MT1-MMP (MMP-14)** (anchored in the cell surface to degrade matrix right where the cell touches it).
+---
 
-MMPs are secreted as inactive **zymogens** and activated by cleavage (MT1-MMP activates MMP-2; plasmin activates others). Their activity is opposed by **tissue inhibitors of metalloproteinases (TIMPs)**. *The MMP–TIMP balance determines net matrix proteolysis at any location.* In tumors, the balance shifts hard toward proteolysis: cancer cells overexpress MMP-2, MMP-9, and MT1-MMP, and tumor-associated fibroblasts and macrophages add more. MMP-9 is upregulated in essentially every invasive cancer; beyond cutting type IV collagen, it *releases ECM-bound growth factors* (TGF-β, VEGF, FGF), feeding further EMT, angiogenesis, and immunosuppression — so the protease that opens the path also amplifies the signals that drive invasion.
+### Partial EMT: the spectrum that matters most
 
-<!-- → [FIGURE: invasion through the basement membrane — an invadopodium concentrating MT1-MMP and MMP-2/9 at the cell surface, cleaving type IV collagen, with TIMPs shown opposing and the MMP–TIMP balance tipped toward proteolysis] -->
+The textbook picture of EMT as a binary switch — fully epithelial flips to fully mesenchymal — has been substantially revised. Most cells undergoing EMT in actual tumors achieve only **partial EMT**: they retain some epithelial features (residual E-cadherin, cytokeratin expression) while gaining mesenchymal ones (vimentin, migratory capacity, invasiveness). And the partial-EMT state appears to be the most metastatic.
 
-**The cautionary tale.** Broad-spectrum MMP inhibitors (marimastat, batimastat, prinomastat) were taken to phase 3 trials in the 1990s–2000s. *All failed* (Coussens et al., 2002). The reasons: musculoskeletal toxicity (from blocking MMPs needed for normal tissue homeostasis), poor pharmacokinetics, and — critically — *timing*: by the time cancer is clinically detected, MMP-driven invasion has usually already happened. The field largely abandoned broad-spectrum inhibitors. This is a recurring lesson in cancer medicine: a mechanism can be genuinely necessary for the disease and still be a poor drug target, because of where it also operates and when in the disease course it acts.
+Why would a *partial* transition be more metastatic than a complete one? Because metastasis is not just invasion — it requires the cell to survive in the bloodstream, arrest in a capillary bed, extravasate, and *re-establish epithelial character* in the new organ to grow a secondary tumor. A cell that is fully locked in the mesenchymal state cannot do that last step. It needs the **plasticity to reverse** — to undergo **mesenchymal-epithelial transition (MET)** and re-epithelialize at the metastatic site. Partial-EMT cells, sitting in an intermediate state, retain that plasticity. They are the ones that successfully complete the full metastatic journey.
 
-### Cytoskeletal reorganization and modes of migration
+The mechanism that enforces these intermediate states and creates the spectrum is an elegantly simple regulatory circuit: the **miR-200/ZEB double-negative feedback loop**.
 
-A cell that has loosened its junctions and degraded its matrix still has to *move*. Migration is a coordinated cycle: **polarization** (front-back asymmetry), **protrusion** (actin polymerization pushing the leading edge forward — broad **lamellipodia** via the Arp2/3 complex, finger-like **filopodia** via formins), **adhesion** (new integrin-mediated **focal adhesions** to the matrix), **contraction** (myosin II pulling the cell body forward), and **rear retraction**. The **Rho-family GTPases** coordinate it: Cdc42 (filopodia), Rac1 (lamellipodia), RhoA (rear contraction). In cancer cells this machinery is hyperactivated, and cells form specialized **invadopodia** — actin-rich protrusions that concentrate MT1-MMP and drill through the matrix. Invadopodia are the cellular drilling apparatus for breaching barriers, regulated by Src kinase and the Tks5 scaffold.
+The microRNA family **miR-200** represses the translation of **ZEB1** and **ZEB2** — it binds their 3' UTRs and prevents their protein from accumulating. ZEB1 and ZEB2, in turn, repress the *transcription* of miR-200. Two mutual repressors. Think about what that topology produces.
 
-Cancer cells invade in distinct modes, and the distinction matters therapeutically:
+A double-negative feedback loop is a **bistable switch**: because each repressor suppresses the other, the system has two stable equilibria — one where miR-200 is high and ZEB is low (the epithelial state, because miR-200 is relieving ZEB's repression of E-cadherin and other epithelial genes), and one where ZEB is high and miR-200 is low (the mesenchymal state, because ZEB is actively repressing E-cadherin and miR-200). Intermediate states are inherently unstable in a pure bistable switch — small perturbations push the system toward one pole or the other.
 
-- **Single-cell mesenchymal invasion** — lone cells using integrin traction, invadopodia, and MMPs. Classical EMT-driven invasion.
-- **Amoeboid invasion** — cells squeeze through tissue by actomyosin contractility *without* needing matrix proteases. Faster than mesenchymal migration. *This mode can evade MMP-inhibitor therapy entirely* — a partial explanation for why blocking proteolysis is not enough.
-- **Collective invasion** — cohorts move together keeping cell-cell contacts; leader cells acquire EMT features and drive, follower cells stay epithelial. Common in breast, colon, and head-and-neck cancer.
+But this loop is not operating in isolation. It is tuned by the strength of incoming EMT signals. A strong, sustained TGF-β signal keeps the system pushed toward the mesenchymal pole. A weaker or transient signal leaves it in an intermediate zone. Single-cell RNA sequencing of actual tumors reveals many coexisting EMT states — not two, not three, but a continuous distribution across the epithelial-mesenchymal spectrum. The bistable topology explains why cells *tend toward* one state or the other; the varying signal strengths explain why many cells sit in the middle.
 
-These modes are not fixed; a single tumor can use several, and cells can switch between them — which is precisely why a therapy aimed at one mode often fails to stop invasion.
+<!-- → [DIAGRAM: miR-200/ZEB double-negative feedback loop — two nodes (miR-200 and ZEB1/2) with mutual repression arrows. Label the epithelial attractor (high miR-200 / low ZEB) and mesenchymal attractor (low miR-200 / high ZEB). Show a TGF-β arrow pushing the system toward the mesenchymal state. Annotate the partial-EMT zone in the middle as the most metastatic region.] -->
 
-## Worked Example
+---
 
-**Situation.** A drug developer reasons as follows: invasion requires cancer cells to degrade the basement membrane; MMPs do that degradation; MMP-9 is upregulated in essentially every invasive cancer. Therefore a potent MMP-9 inhibitor should block invasion and improve survival in patients with established invasive cancer. They design a phase 3 trial in advanced disease. Predict the outcome and explain it mechanistically.
+### Cutting through: MMP enzymes and why they failed as drug targets
 
-**Reasoning.** The first two premises are correct — MMPs are genuinely required for matrix breach, and MMP-9 is genuinely overexpressed. So the temptation is to predict success. *The dead end:* "necessary mechanism therefore good target" skips two questions the chapter has flagged. First, *where else does the target work?* MMPs are needed for normal tissue homeostasis (wound healing, bone remodeling, immune function), so systemic inhibition will produce off-tumor toxicity — historically, musculoskeletal pain severe enough to limit dosing. Second, *when in the disease does the mechanism act?* Invasion through the basement membrane happens early — typically long before the cancer is clinically detectable. In a patient with *advanced* disease, the invasive cells have already crossed barriers and disseminated; inhibiting the protease now is closing the gate after the herd has left.
+A cell that has undergone EMT and detached from its neighbors still faces the basement membrane. To cross, it needs to degrade type IV collagen — the structural backbone of the membrane. The enzymes that do this are the **matrix metalloproteinases (MMPs)**, a family of 23 zinc-dependent proteases that together can degrade essentially every component of the extracellular matrix.
 
-There is a third problem the developer ignored: even at the right time, cancer cells can switch to **amoeboid migration**, squeezing through tissue without proteases at all, bypassing the drug's entire mechanism.
+The key players in basement-membrane breach are the **gelatinases**: **MMP-2** and **MMP-9**, both of which cleave type IV collagen. And **MT1-MMP (MMP-14)**, a membrane-anchored protease that is uniquely important because it is displayed on the cell surface — it degrades matrix *right where the cell is touching it*, and it activates MMP-2 by cleaving its zymogen form.
 
-**Resolution.** The trial fails — which is exactly what happened to marimastat, batimastat, and prinomastat (Coussens et al., 2002). The drug engages its target, but the target's normal roles cause toxicity, its critical window has passed, and an alternative migration mode routes around it.
+All MMPs are secreted as inactive zymogens — the active site is blocked by a propeptide domain until a cleavage event removes it. MT1-MMP activates MMP-2 at the cell surface; plasmin and other proteases activate others. Their activity is opposed by **tissue inhibitors of metalloproteinases (TIMPs)** — four of them, each with different affinities for different MMPs. The net matrix degradation at any location in tissue is determined by the **MMP-to-TIMP ratio** at that site.
 
-**The lesson.** A mechanism can be necessary for a disease and still be a bad drug target — because of where else it works, when it acts, and whether the cell has a bypass.
+In tumors, this balance is shifted aggressively toward proteolysis. Cancer cells overexpress MMP-2, MMP-9, and MT1-MMP. Tumor-associated fibroblasts and macrophages — recruited by signals from the cancer cells — also express MMPs, so the protease contribution is not just from the tumor cells themselves but from the entire cellular neighborhood they have restructured. MMP-9 is upregulated in essentially every invasive carcinoma. And MMP-9 does more than cut collagen: it releases growth factors that are stored in latent, matrix-bound form — TGF-β, VEGF, FGF-2 — which then drive further EMT, angiogenesis, and immunosuppression. The protease that opens the path amplifies the signals that produce more invasion. A positive feedback loop written in enzyme activity.
 
-**The limit.** The failure of *broad-spectrum* MMP inhibition does not prove MMPs are untargetable. Selective inhibitors of specific MMPs, or anti-MT1-MMP strategies deployed earlier in the disease, remain under investigation; the conclusion is about a class and a clinical setting, not about the mechanism's validity `[verify — selective-inhibitor outcomes still emerging]`.
+<!-- → [FIGURE: invasion through the basement membrane — an invadopodium concentrating MT1-MMP and MMP-2/9 at the cell surface, cleaving type IV collagen, with TIMPs shown opposing and the MMP–TIMP balance tipped toward proteolysis. Include the ECM-bound growth factor release arrow (MMP-9 releasing TGF-β and VEGF).] -->
 
-## Common Misconceptions
+Given all of this, the pharmaceutical reasoning in the 1990s seemed airtight: MMPs are required for basement-membrane breach; MMP-9 is in every invasive tumor; therefore, inhibit MMPs and stop invasion. Broad-spectrum MMP inhibitors — marimastat, batimastat, prinomastat, others — were developed and taken to phase 3 clinical trials in lung, breast, colorectal, ovarian, and other cancers. *All failed.* No survival benefit. The class was largely abandoned.
 
-**"An *in situ* carcinoma is just an early invasive cancer that hasn't grown yet."** The DCIS patient in the opening case shows why this is wrong. The difference is not size or time — it is a discrete *capacity*: whether cells have crossed the basement membrane. An *in situ* lesion can be large; an invasive lesion can be tiny. What changes prognosis is the breach of the barrier, not the bulk of the tumor.
+What went wrong? Three things, each illuminating a general principle.
 
-**"EMT is a one-way switch from epithelial to mesenchymal."** The miR-200/ZEB bistable loop and the partial-EMT data refute this. Cells occupy a *spectrum*, and the most metastatic cells are the *partial* ones — precisely because they keep the plasticity to reverse (MET) and re-epithelialize at the distant site. A cell locked fully mesenchymal cannot seed a metastasis. Reversibility is the point.
+First, MMPs are not tumor-specific. They are required for normal tissue homeostasis — wound healing, bone remodeling, immune cell migration, reproductive cycling. Systemic inhibition produces musculoskeletal toxicity: joint pain and stiffness severe enough to limit dosing long before therapeutic concentrations are reached in the tumor.
 
-**"Cancer cells invade as lone wolves."** Often they move as cohesive groups — collective invasion with leader and follower cells — and circulating clusters are far more efficient at metastasis than single cells (a thread the next chapter picks up). The lone-mesenchymal-cell image is one mode among several, and not the most dangerous one.
+Second, timing. By the time a patient has clinically detectable cancer — the stage at which these trials enrolled patients — invasion through the basement membrane has already happened. In many cases it happened years before diagnosis. Blocking MMP activity at that point is closing the barn door after every horse has left.
 
-**"If MMPs are necessary for invasion, blocking them must help patients."** The worked example and the failed phase 3 trials are the direct counter. Necessity of a mechanism does not imply a good drug — the target's normal roles, its timing in the disease, and the cell's bypass routes (amoeboid migration) all defeated the obvious inference. This is the same proxy-versus-truth discipline from the therapy chapters: target engagement is not clinical benefit.
+Third, and most instructively for what follows: even in the right patient at the right time, a cancer cell that cannot use MMPs can simply *switch to a different mode of migration*. The cell has options.
+
+---
+
+### Moving: three modes, each a different problem
+
+A cell that has lost epithelial adhesion and opened a path through the matrix still has to physically move. Migration is a coordinated mechanical cycle: the leading edge extends a protrusion driven by actin polymerization, new adhesions form between the protrusion and the matrix, the cell body contracts and pulls forward, the rear detaches and retracts. The **Rho-family GTPases** coordinate it: Cdc42 drives filopodia formation at the leading edge, Rac1 drives the broad flat lamellipodia, RhoA drives actomyosin contraction at the rear. In invasive cancer cells this machinery is hyperactivated, and cells form specialized **invadopodia** — actin-rich protrusions that concentrate MT1-MMP and physically drill through the matrix. Invadopodia are regulated by Src kinase and the Tks5 scaffold, and they are the cellular apparatus that makes invasion possible at the boundary between a cell and the matrix it needs to cross.
+
+But here is the complication for therapy: cancer cells do not use just one mode of migration. Three distinct modes have been documented, each with different dependencies.
+
+**Single-cell mesenchymal invasion** is the classical EMT-driven mode. Lone cells use integrin traction, invadopodia, and secreted MMPs to carve individual paths through the matrix. This mode requires matrix proteolysis and integrin-matrix adhesion. It is the mode most disrupted by MMP inhibitors and integrin-blocking antibodies.
+
+**Amoeboid invasion** requires neither. Cells squeeze through pre-existing gaps and pores in the matrix using high actomyosin contractility — they change shape instead of cutting through barriers. Like an amoeba. This mode is faster than mesenchymal migration, does not depend on MMP activity, and is not disrupted by MMP inhibitors or integrin blockade. A cancer cell blocked from mesenchymal invasion by an MMP inhibitor can, in many cases, shift to amoeboid invasion and keep moving. This is one of the mechanistic explanations for why the broad-spectrum MMP trials failed even if the timing and toxicity problems were set aside.
+
+**Collective invasion** is what actually dominates many of the most common solid tumors. Cohorts of cells move together, maintaining cell-cell contacts. Leader cells at the front acquire partial-EMT features and drive the group forward; follower cells maintain epithelial characteristics. This mode is prominent in breast cancer, colorectal cancer, and head-and-neck cancer. Importantly, circulating clusters of cells — shed from collectively invading groups — are far more efficient at seeding metastases than single cells. A cluster of fifty cells arriving in a capillary bed has a much higher probability of establishing a colony than a single cell does.
+
+These three modes are not fixed properties of a cell. A single tumor can simultaneously employ all three, and individual cells can switch between modes in response to mechanical cues, growth factor gradients, and drug pressure. A therapy that blocks one mode may simply select for cells using another. This is not a deficiency in our understanding — it is a fundamental property of a system that has redundancy built into it by evolution. Neural crest cells, which use EMT and active migration in development, need to be robust to perturbations. The cancer cell is exploiting the robustness of a developmental program.
+
+<!-- → [DIAGRAM: three migration modes side-by-side — (1) single-cell mesenchymal: lone cell with invadopodia and MMP activity; (2) amoeboid: cell squeezing through gap without proteolysis; (3) collective: cluster with leader/follower cells, leader showing partial EMT markers. Label the drug-vulnerability of each mode: MMPs/integrins vulnerable in mode 1, neither required in mode 2, complex in mode 3.] -->
+
+---
+
+### What the cell has done, and what it still has to do
+
+By the end of invasion, a cancer cell has accomplished something developmentally extraordinary. It has activated a program — EMT — that was last used in embryogenesis. It has reorganized its cytoskeleton, shed its epithelial identity, weakened its junctions, and acquired polarity suited for movement rather than for sheet integrity. It has recruited or stimulated a local proteolytic environment that cleared a path through the matrix. And it has physically crawled out of the primary mass and into the surrounding stroma.
+
+That is invasion. It is not yet metastasis.
+
+The cell is now in the stroma — but it needs to reach a blood or lymphatic vessel, survive the transit, extravasate at a distant site, and re-establish a colony. Each of those steps has its own molecular logic and its own failure modes. Most cells that successfully invade never become metastases. The process is enormously inefficient — a large primary tumor sheds millions of cells into the circulation daily, and most of them die before doing anything.
+
+The reason to understand invasion with this precision is not only that it is scientifically elegant — which it is — but that every failure in the anti-invasion therapeutic program has been a failure of incomplete mechanistic understanding. MMP inhibitors failed because their developers did not adequately account for where else the enzymes were needed, when in the disease their action would matter, and what the cell would do when one route was blocked. A therapy that accounts for all three of those considerations does not yet exist. Building it requires understanding what this chapter has tried to lay out: the three problems the cell must solve, the multiple programs it can use to solve each one, and the redundancy baked into every step.
+
+---
 
 ## Exercises
 
-1. **(Understand)** State, in one sentence, the single molecular event that distinguishes invasive carcinoma from carcinoma in situ, and name the barrier involved.
+**Warm-up**
 
-2. **(Apply)** A breast tumor shows loss of E-cadherin with no mutation in *CDH1*. Propose the most likely mechanism of E-cadherin loss, name two transcription factors that could mediate it, and explain what happens to the β-catenin released from the disassembled junctions.
+1. *(Recall — difficulty: low)* State in one sentence the single molecular event that distinguishes invasive carcinoma from carcinoma *in situ*, and name the specific structural barrier involved. *What this tests: whether you can distinguish bulk from barrier-crossing as the defining event.*
 
-3. **(Apply/Analyze)** A patient's tumor is treated with a selective MT1-MMP inhibitor, yet invasion continues in tissue-culture invasion assays. Propose a migration mode that could explain continued invasion despite protease blockade, and explain why that mode does not require MMP activity.
+2. *(Recall — difficulty: low)* Name two molecular markers lost during EMT and two gained, and identify which single lost marker has a secondary signaling consequence beyond loss of cell-cell adhesion. *What this tests: familiarity with the EMT marker table and E-cadherin's dual role.*
 
-4. **(Produce — mechanism map)** Draw the miR-200/ZEB double-negative feedback loop. Show the two mutual-repression arrows, label the epithelial and mesenchymal stable states, and annotate where a strong, sustained TGF-β signal would push the system. In one sentence, explain why this loop produces a *spectrum* of states rather than a binary toggle.
+3. *(Recall — difficulty: low)* What is the MMP–TIMP balance, and in which direction is it shifted in an invasive tumor? *What this tests: the basic proteolytic framework before the drug-target reasoning is applied.*
 
-5. **(Produce — invasion checklist)** Build a three-row "capabilities" chart for invasion (loss of adhesion; matrix degradation; motility). For each row, name the key molecules involved and one candidate therapeutic strategy, and mark with a note which strategy a switch to amoeboid migration would defeat.
+**Application**
 
-## What Would Change My Mind
+4. *(Apply — difficulty: medium)* A breast tumor biopsy shows loss of E-cadherin protein with no mutation in the *CDH1* gene sequence. Propose the most likely mechanism of E-cadherin silencing, name two transcription factors capable of mediating it, and explain what happens to the β-catenin that is released from the disassembled junctions. *What this tests: transcriptional versus mutational silencing, EMT factor identity, and the dual role of E-cadherin.*
 
-The chapter's central claim is that invasion is an acquired, discrete cellular capacity — crossing the basement membrane via loss of adhesion, matrix degradation, and motility — and that this capacity, not tumor bulk, separates curable from lethal disease. The finding that would force revision: convincing, repeated demonstration that clinically lethal metastatic spread routinely occurs *without* any loss of epithelial adhesion, without matrix-degrading proteolysis, and without acquired motility — for instance, if cells were shown to disseminate passively in large numbers and seed distant organs while remaining fully epithelial and immotile, with no enrichment for invasion-associated programs in the cells that succeed. The discovery that EMT is *dispensable* for metastasis in some models already pushes on the "EMT is required" sub-claim and is why this chapter frames EMT as one route to motility rather than the only one. But the broader claim — that some acquired migratory/invasive capacity distinguishes the cells that kill — would need genuinely passive, capacity-free metastasis to fall.
+5. *(Apply — difficulty: medium)* A patient's tumor is treated with a potent, selective MT1-MMP inhibitor, yet invasion continues in 3D culture assays. Propose a specific migration mode that would explain continued invasion without MMP activity, and describe the cytoskeletal mechanism it uses instead. *What this tests: migration-mode diversity and the limits of protease-targeted therapy.*
 
-## Still Puzzling
+6. *(Apply — difficulty: medium)* A drug company proposes treating early-stage DCIS patients with a broad-spectrum MMP inhibitor to prevent progression to invasive carcinoma. Assess whether the two most-cited problems with MMP inhibition in previous trials (toxicity and timing) would still apply in this population, and state whether the rationale is improved relative to the advanced-disease trials. *What this tests: application of the failure-mode analysis to a different disease setting.*
 
-- **Is EMT strictly required for metastasis?** Some mouse models report metastasis proceeding with EMT genetically blocked, while EMT-positive cells still dominate the disseminating population in others. The evidence does not yet cleanly distinguish "EMT is required" from "EMT is one common route among several." This unsettles how aggressively to target EMT therapeutically.
+**Synthesis**
 
-- **Why did selective MMP inhibition not obviously rescue the failed class?** If broad-spectrum failure was mostly about toxicity and timing, well-timed selective inhibitors should help — yet clear wins have been slow to appear. Whether the limit is timing, redundancy among proteases, or migration-mode switching is unresolved.
+7. *(Synthesize — difficulty: high)* Draw or describe the miR-200/ZEB double-negative feedback loop. Label the two stable attractors. Then: (a) explain what "bistability" means in this context and why the loop topology produces it, and (b) explain why partial-EMT cells — sitting between the two attractors — are more metastatic than fully mesenchymal cells, invoking the MET step required at the distant site. *What this tests: regulatory circuit logic, bistability, and the connection between invasion plasticity and metastatic efficiency.*
 
-- **What governs the switch between migration modes?** Cells move between mesenchymal, amoeboid, and collective modes, but we cannot yet predict or reliably control the switch. A therapy that blocks one mode may simply select for another — the central reason invasion has resisted targeting, and a thread that runs straight into the metastasis chapter.
+8. *(Synthesize — difficulty: high)* A cancer cell in a hypoxic, TGF-β-rich microenvironment activates HIF-1α. Trace the molecular chain from HIF-1α activation to (a) E-cadherin repression via an EMT transcription factor, and (b) matrix degradation via MMP-9. At each step, name the intermediate factor. Then explain what positive feedback loop connects MMP-9 activity back to further EMT signaling. *What this tests: integration of hypoxia, EMT, and proteolysis as a convergent system.*
 
-## References
+**Challenge**
 
-- Liotta, L. A. (1986). Tumor invasion and metastases — role of the extracellular matrix: Rhoads Memorial Award lecture. *Cancer Research*, 46(1), 1–7.
-- Thiery, J. P. (2002). Epithelial-mesenchymal transitions in tumour progression. *Nature Reviews Cancer*, 2(6), 442–454.
-- Nieto, M. A., Huang, R. Y.-J., Jackson, R. A., & Thiery, J. P. (2016). EMT: 2016. *Cell*, 166(1), 21–45.
-- Coussens, L. M., Fingleton, B., & Matrisian, L. M. (2002). Matrix metalloproteinase inhibitors and cancer: trials and tribulations. *Science*, 295(5564), 2387–2392.
-- National Cancer Institute. Types of Cancer Treatment. https://www.cancer.gov/about-cancer/treatment/types
-
-## Prompts
-
-<!-- This section is populated automatically by the Cowork enrichment
-     pass. Each D3 figure generated in this chapter gets an entry here:
-     the figure number, a short title, and a ready-to-paste prompt
-     that produces a close approximation of that figure. -->
-
-*No figures have been generated for this chapter yet.*
+9. *(Challenge — difficulty: high)* Design a hypothetical combination therapy targeting invasion that addresses the three failure modes of the historical MMP inhibitor trials: normal-tissue toxicity, timing, and migration-mode switching. For each failure mode, specify a mechanistic approach that addresses it, name a molecular target, and identify one predicted resistance mechanism the combination might still face. There is no single correct answer; the goal is mechanistically coherent reasoning. *What this tests: integrative thinking about target selection, therapeutic windows, and resistance anticipating the next chapter on metastasis.*
