@@ -1,142 +1,138 @@
-# Tumor Immunology: Surveillance, Antigens, and the Immune Response
+# Chapter 9 — Tumor Immunology: Surveillance, Antigens, and the Immune Response
+*Why the cancer you can see is the one that won an evolutionary contest you never knew was happening.*
 
-## Learning Objectives
+The kidney donor had melanoma fifteen years before she died. It was treated, and declared cured. By every available measure it was gone. When her kidneys were transplanted into a recipient who then began lifelong immunosuppression, something happened that no one had anticipated: the recipient developed melanoma. Not a new primary tumor arising from her own cells — the cells were the donor's. Melanoma cells that had been, apparently, sitting dormant somewhere in the donor's tissue for fifteen years, kept silent by the donor's immune surveillance, re-emerged once they were transplanted into a body whose immune defenses were deliberately switched off.
 
-By the end of this chapter, you should be able to:
+Nothing about the cancer cells changed. What changed was who was watching them.
 
-- **Explain** the cancer immunoediting framework (elimination, equilibrium, escape) and **evaluate** the experimental and clinical evidence that supports each phase (Dunn et al., 2002; Shankaran et al., 2001).
-- **Distinguish** the major categories of tumor antigen — tumor-specific versus tumor-associated — and **predict**, for a given antigen, what normal tissue toxicity an immune response against it would cause.
-- **Trace** the adaptive anti-tumor response from dendritic-cell antigen capture through cytotoxic T-cell killing, **identifying** at each step where tumors interrupt the chain (Chen & Mellman, 2013).
-- **Analyze** why tumor mutational burden correlates with neoantigen load and immune visibility, and **assess** the limits of mutational burden as a predictor of immune control.
-- **Compare** the killing mechanisms of CD8+ T cells, natural killer cells, and macrophages, and **justify** which effector matters most for an MHC-low tumor.
+This case is not a curiosity. It is a clean natural experiment that answers a question immunologists had argued about for most of the twentieth century: can the immune system genuinely hold cancer in check, not by eliminating it but by containing it, for years? The answer is yes. And the follow-up question — which is what this chapter is built on — is: if containment is real, what is the immune system recognizing, and why does that recognition eventually fail?
 
-## Opening Case
+---
 
-A 34-year-old woman receives a kidney transplant and begins lifelong immunosuppression to keep her body from rejecting the graft. Eight years later she develops a melanoma on her forearm. When the pathologist examines the tumor and the surrounding tissue, something is strange: the cancer is unusually advanced for its short clinical history, and her oncologist notes that melanomas in transplant recipients tend to behave more aggressively than in patients with intact immune systems. More striking still, a review of her donor's records reveals that the organ donor had a history of melanoma treated fifteen years earlier and declared cured. The recipient's melanoma is donor-derived. Cells that her donor's immune system had apparently been holding silent for over a decade — never eliminated, never grown — began to expand once they were transplanted into a body whose immune defenses were deliberately switched off.
+### The idea that was too intuitive to trust
 
-Nothing about the tumor cells changed. What changed was the surveillance around them. The case raises the question this chapter is built on: if an immune system can hold cancer cells in check for fifteen years, what is it recognizing, how is it recognizing it, and why does that recognition eventually fail?
+Paul Ehrlich gestured at immunological tumor control in 1909. Lewis Thomas and Macfarlane Burnet developed it into a formal hypothesis in the 1950s and 1970s. The claim was simple: the immune system continuously inspects the body's own cells, identifies those that have turned cancerous, and destroys them before they become detectable tumors. The word for this is **immunosurveillance**, and for decades the evidence for it was frustratingly indirect.
 
-## Core Concepts
+The problem was that cancer is common. If the immune system were surveilling and eliminating transformed cells, why did so many people get cancer at all? The easy objection was that surveillance must fail far more than it succeeds, in which case calling it "surveillance" was generous. The evidence that shifted the field was experimental rather than epidemiological. When geneticists engineered mice lacking functional T and B cells — RAG2-knockout mice, which cannot complete lymphocyte development — those mice developed spontaneous tumors at elevated rates and responded to carcinogens more dramatically than immunocompetent controls. Remove the watchers, and the cancers appear. Separately, mice lacking the interferon-γ response, or lacking perforin (the pore-forming protein through which cytotoxic cells kill), showed the same pattern. Each component of the immune killing machinery, when disabled, made tumors more frequent and more aggressive.
 
-### Immunosurveillance: the body patrols for transformed cells
+In humans the same logic plays out in the clinic. Transplant recipients on chronic immunosuppression have elevated rates of cancer — most dramatically the virally driven ones, where the immune system is simultaneously containing both the cancer cell and the oncogenic virus that drives it. People with HIV/AIDS, before effective antiviral therapy, showed extraordinary rates of Kaposi's sarcoma and certain lymphomas. The donor-derived melanoma case is simply one of the starkest illustrations of a general principle the epidemiology had already established.
 
-The plain-language claim is old and intuitive: the immune system continuously inspects the body's cells and destroys the ones that have turned cancerous before they ever become tumors. Paul Ehrlich gestured at the idea in 1909; Lewis Thomas and Macfarlane Burnet gave it modern form in the 1950s and 1970s (Burnet, 1970). The formal term is **immunosurveillance** — the hypothesis that the immune system recognizes and eliminates transformed cells, so that clinically detectable cancer represents a *failure* of that surveillance.
+But the simple surveillance hypothesis — immune system watches, eliminates, success — was too simple. The transplant case showed why: containment for fifteen years is not elimination. A more nuanced framework was needed.
 
-The hypothesis was contested for decades because the evidence was indirect. It became hard to dismiss when mouse genetics let researchers remove specific immune components and watch what happened. Mice lacking functional T and B cells (RAG2-knockout), or lacking the interferon-γ response, or lacking perforin, developed spontaneous and carcinogen-induced tumors at dramatically elevated rates (Shankaran et al., 2001). Remove the watchers and the cancers appear. In humans the same pattern emerges from the clinic: transplant recipients and people with HIV/AIDS have substantially elevated rates of cancer — most dramatically the virally driven ones (Kaposi sarcoma, certain lymphomas, HPV-related cancers), where the immune system is containing both the cancer cell and the virus that drives it.
+---
 
-<!-- → [DIAGRAM: cancer immunoediting — the three Es, showing a population of transformed cells being eliminated, a subset held in equilibrium, and a resistant clone escaping into clinical tumor] -->
+### Immunoediting: the immune system sculpts what it cannot destroy
 
-### Immunoediting: elimination, equilibrium, escape
+The modern refinement is **cancer immunoediting**, described by Dunn, Schreiber, and colleagues in 2002. It reframes the immune system's relationship to a developing cancer not as binary success or failure but as a dynamic, three-phase process.
 
-The modern refinement of immunosurveillance is **cancer immunoediting** (Dunn et al., 2002), which describes a dynamic, three-phase relationship between the immune system and a developing cancer:
+**Elimination** is classical surveillance: the immune system recognizes and destroys most transformed cells before they form a tumor. This is the phase Ehrlich and Burnet imagined. Most transformed cells probably end here.
 
-- **Elimination.** The immune system recognizes and destroys most transformed cells before they form a tumor. This is classical immunosurveillance.
-- **Equilibrium.** Some cells survive elimination by acquiring partial resistance. They are not destroyed, but they are held in check by ongoing immune pressure — dormant or slow-growing, sometimes for years or decades. This is the phase the transplant case made visible: the donor's cells sat in equilibrium for fifteen years.
-- **Escape.** Eventually, a variant acquires changes that let it evade immune pressure entirely. It expands into a clinically detectable cancer. Escape is what we are seeing whenever we diagnose a tumor.
+**Equilibrium** is what the transplant case made visible. Some cells survive elimination by acquiring partial resistance. They are not destroyed, but they are not expanding either — they are held in check by ongoing immune pressure. Dormant. This phase can last years or decades. The donor's melanoma cells persisted in equilibrium for fifteen years.
 
-The word "editing" carries the key idea. Immune pressure is a selection force. By killing the most visible cells, the immune system sculpts the surviving population toward invisibility — so the tumor that finally escapes is, almost by definition, one that has been shaped to evade the very system that was containing it. This reframes a diagnosis: the cancer you can see is the one that won an evolutionary contest you never knew was happening.
+**Escape** is what we observe when we diagnose cancer. A variant acquires changes that let it evade immune pressure entirely. It expands. The equilibrium breaks. The tumor becomes clinically visible.
 
-### What makes a cancer cell visible: tumor antigens
+The word "editing" is the insight. The immune system is not just failing when cancer escapes — it is, in the process of eliminating the most visible cells, *selecting for* the less visible ones. Every cancer cell the immune system successfully kills is one that expressed something recognizable. The cells that survive are, by selection, the ones that were harder to see, or harder to kill, or better at suppressing the response. The tumor that finally escapes is almost by definition one that has been shaped by immune pressure toward invisibility. A cancer diagnosis is the endpoint of an evolutionary contest. You are seeing the winner.
 
-For the immune system to attack a cell, the cell must look different. A **tumor antigen** is any molecule on a cancer cell that the immune system can recognize as a target. Antigens fall into two broad classes that differ in a way that matters enormously for therapy.
+This reframing has a disquieting corollary. A more effective immune response — one that eliminates more cells in earlier phases — applies more selection pressure and may produce, in the cells that survive, a more aggressively evasive tumor. The immune system that does the best job at surveillance also does the most editing. This is not an argument against immunosurveillance; it is an argument for understanding what makes cells recognizable before the editing goes too far.
 
-**Tumor-specific antigens (TSAs)** exist only on cancer cells, never on normal cells. They are the cleanest targets because an immune response against them cannot damage healthy tissue. Two important sources:
+<!-- → [DIAGRAM: cancer immunoediting — three-phase arc showing a population of transformed cells. Phase 1 (Elimination): immune cells clearing most transformed cells. Phase 2 (Equilibrium): a small dormant population held in check, balanced arrows between immune pressure and tumor persistence. Phase 3 (Escape): a resistant clone expanding past immune control. Annotate the evolutionary selection dynamic: eliminated cells = visible, escaping cells = edited toward invisibility.] -->
 
-- **Viral antigens.** Cancers transformed by oncogenic viruses often express viral proteins — the E6/E7 oncoproteins of HPV in cervical and oropharyngeal cancer, EBV antigens in certain lymphomas and nasopharyngeal carcinoma. These proteins are genuinely foreign.
-- **Neoantigens** — antigens arising from cancer-specific mutations. A point mutation that changes one amino acid can produce a peptide the immune system has never encountered. Neoantigens are tumor-specific and personal to each patient's tumor (treated in detail below).
+---
 
-**Tumor-associated antigens (TAAs)** are expressed on cancer cells *and* on some normal cells, usually at lower levels or in restricted contexts. Targeting them can drive an anti-tumor response, but at the risk of collateral damage to normal tissue. Subtypes include **cancer-testis antigens** (e.g., NY-ESO-1, MAGE-A1) normally restricted to germ cells, which Lloyd Old's group helped define (Chen et al., 1997); **differentiation antigens** such as tyrosinase in melanocytes, CD19/CD20 in B cells, or PSA in prostate; and **overexpressed antigens** such as HER2, present at low levels normally but at high density in amplified cancers.
+### What makes a cell visible: the antigen problem
 
-The practical lesson is a single question you can ask of any antigen: *what normal tissue shares this target?* The answer predicts the toxicity. Attack CD19 and you lose normal B cells (survivable). Attack a protein your heart also expresses and you may not survive it.
+For the immune system to recognize a cancer cell, the cell must display something that marks it as different. A **tumor antigen** is any molecule a cancer cell presents — usually as a peptide fragment on MHC — that an immune cell can recognize as a target. The distinction that matters practically is whether that molecule exists anywhere in normal tissue.
 
-### Neoantigens and central tolerance
+**Tumor-specific antigens** exist only on cancer cells, never on normal tissue. They are the cleanest targets: an immune response against them cannot, in principle, damage healthy cells. Two sources.
 
-Neoantigens are central to modern immunotherapy because of a deep feature of how T cells are educated. During development in the thymus, T cells whose receptors strongly recognize the body's own peptides are deleted — this is **central tolerance**, and it is why a healthy immune system does not attack its own tissues. Self-peptides include every normal protein. A neoantigen, by contrast, was never present during thymic education, so T cells capable of recognizing it survive selection. Neoantigens can therefore be attacked without first overcoming tolerance — they are foreign in the only sense that matters to a T cell.
+The first is viral antigens. When an oncogenic virus transforms a cell, viral proteins are expressed and displayed on MHC — and the immune system has never been taught to tolerate them. HPV-transformed cervical and oropharyngeal cancer cells display the E6 and E7 oncoproteins on MHC class I. EBV-transformed lymphoma cells display EBV antigens. These are genuinely foreign, and the immune response against them is unconstrained by any tolerance mechanism.
 
-Neoantigen supply scales with **tumor mutational burden (TMB)**, the number of mutations in a tumor's genome. More mutations mean more chances to produce a novel peptide. Cancers with high TMB — melanomas with a UV mutational signature, smoking-related lung cancers, microsatellite-instability-high (mismatch-repair-deficient) tumors, POLE-mutant cancers — generate many neoantigens. Pediatric cancers and many hematological cancers generate few. This is the mechanistic root of why high TMB tends to predict response to immune-releasing therapy (the subject of the next chapter): more mutations, more neoantigens, more potential T-cell targets.
+The second source is neoantigens — peptides arising from cancer-specific somatic mutations. When a point mutation changes one amino acid in a protein, the resulting peptide may be one the immune system has never encountered. Neoantigens are personal: each patient's tumor generates a largely private set. They are also, mechanistically, the most attractive targets in immunotherapy, for a reason that requires understanding how T cells are educated.
 
-### The adaptive anti-tumor response, step by step
+**Tumor-associated antigens** are expressed on cancer cells but also — usually at lower levels, or in restricted tissue contexts — on normal cells. The immune system has partial tolerance to them. Targeting them produces an anti-tumor effect but also collateral damage to whatever normal tissue shares the target. Cancer-testis antigens like NY-ESO-1 and MAGE-A1 are normally restricted to germ cells, which are immunologically privileged — so they behave nearly like tumor-specific antigens, but not quite. Differentiation antigens like tyrosinase (in melanocytes) or CD19 and CD20 (in all B cells) are shared with normal tissue. CD19-targeted therapies reliably eliminate normal B cells alongside malignant ones — a toxicity that is, fortunately, survivable. PSA is expressed in normal prostate as well as prostate cancer. HER2 is expressed at low levels in normal breast and cardiac tissue; its overexpression in amplified tumors makes it a useful target but not an entirely safe one.
 
-When the immune system mounts an effective response, the central killers are CD8+ **cytotoxic T lymphocytes (CTLs)**. The sequence — sometimes drawn as the *cancer–immunity cycle* (Chen & Mellman, 2013) — runs:
+The practical question to ask of any antigen is simple: what normal tissue shares this target, and what happens when the immune response hits it? The answer is the toxicity prediction. Attack something truly tumor-specific — a private neoantigen — and the only collateral damage is to tumor cells. Attack a differentiation antigen expressed on a tissue the body needs, and the therapy is bounded by what that tissue loss costs.
 
-<!-- → [DIAGRAM: the cancer-immunity cycle — antigen release, dendritic cell capture, priming in the lymph node, T-cell trafficking, infiltration, and killing, drawn as a loop] -->
+---
 
-1. **Antigen capture.** Dendritic cells in the tumor take up antigen from dying cancer cells and process it — proteasome-degraded fragments onto MHC class I (for CD8+ cells), endosome-degraded fragments onto MHC class II (for CD4+ cells).
-2. **Migration and maturation.** The antigen-loaded dendritic cell travels to a lymph node and matures, raising its MHC, its co-stimulatory molecules (CD80/CD86), and its cytokines.
-3. **Priming.** The dendritic cell presents to T cells. Activation needs two signals: *signal 1*, the antigen–MHC complex binding the T-cell receptor; *signal 2*, co-stimulation through CD28 binding CD80/CD86. (Cytokines such as IL-12 provide a third.) Without signal 2, the T cell goes anergic rather than active — a fact the next chapter will show tumors exploit.
-4. **Expansion and trafficking.** Activated T cells proliferate massively, then leave the node and follow chemokine gradients (CXCL9/10/11) back to the inflamed tumor.
-5. **Killing.** The CTL recognizes its antigen on MHC class I on the cancer cell and kills it — through perforin/granzyme (punching pores and delivering apoptosis-inducing enzymes) and through death receptors (FAS ligand, TRAIL). One CTL can kill many targets.
-6. **Memory.** Most effectors die; a few become long-lived memory cells.
+### Why neoantigens escape central tolerance
 
-The chain is robust when intact, but every link is a place a tumor can cut.
+The immune system contains T cells capable of recognizing almost any peptide — including the peptides on cancer cells. So why does it not always attack? The answer is tolerance, and understanding tolerance is what makes the neoantigen concept mechanistically coherent rather than just empirically useful.
 
-### Innate immunity and the MHC-loss trap
+During development in the thymus, T cells whose receptors bind strongly to the body's own peptides are deleted. This **central tolerance** is how a healthy immune system avoids attacking normal tissue: every self-peptide is represented, and T cells that recognize self-peptides with high affinity are eliminated before they mature. The result is a T-cell repertoire that is, in principle, tolerant to every protein a normal cell expresses.
 
-Not all anti-tumor killing is antigen-specific. **Natural killer (NK) cells** kill through the same perforin/granzyme machinery as CTLs but recognize targets differently. NK cells use **missing-self recognition**: they attack cells that have *downregulated* MHC class I. This matters because MHC downregulation is exactly the trick some tumors use to hide from CTLs — and in doing so they expose themselves to NK cells. NK cells also use **stress-ligand recognition**, attacking cells displaying stress-induced ligands (MICA, MICB, ULBPs) common on transformed cells. Macrophages, dendritic cells, the complement system, and inflammasomes round out the innate contribution. The interplay matters: innate immunity initiates and amplifies inflammation, and adaptive immunity depends on innate co-stimulation to function.
+Tumor-associated antigens are self-proteins expressed at higher levels or in aberrant locations. Central tolerance to them is partial — some self-reactive T cells escape deletion, but their activation thresholds are raised by peripheral tolerance mechanisms. Targeting TAAs means pushing against that tolerance, which is possible but requires help — adjuvants, checkpoint inhibition, the engineering of high-affinity T-cell receptors.
 
-## Worked Example
+Neoantigens were never present in the thymus. A peptide arising from a somatic mutation that occurred after thymic education is a peptide that was never evaluated during T-cell selection. T cells capable of recognizing it survived thymic selection intact, with no tolerance imposed. This is why neoantigens are so attractive: they can be targeted without first overcoming the brakes the body deliberately placed on the immune response to protect normal tissue. They are foreign in the only sense that matters to a T cell.
 
-**Situation.** A research team studies two patient tumors of the same histologic type. Tumor A responds vigorously to therapy that releases T-cell brakes; Tumor B does not respond at all. Both have abundant T cells in the blood. The team wants to know why B is resistant.
+The number of neoantigens a tumor offers scales directly with how many mutations it carries — its **tumor mutational burden (TMB)**. More mutations, more chances for novel peptides. Tumors with very high TMB — melanomas with UV signatures, lung cancers from tobacco carcinogens, mismatch-repair-deficient colorectal cancers, POLE-mutant cancers — generate large neoantigen pools. Pediatric cancers and many leukemias, arising with very few mutations, generate almost none. This is the mechanistic root of why TMB has emerged as a predictor of immune-based therapy response: more targets, more potential T-cell recognition. But TMB sits at the top of a long chain, and any step in the chain can fail.
 
-**Reasoning — first attempt (a dead end).** The obvious hypothesis: Tumor B must have fewer neoantigens — lower mutational burden, fewer targets. The team sequences both. To their surprise, Tumor B has a *higher* mutational burden than Tumor A and a longer predicted neoantigen list. By the TMB-predicts-response logic, B should respond better, not worse. The mutational-burden explanation fails. This is the trap of treating a correlation as the whole mechanism: TMB predicts response *on average across populations*, but it is upstream of many steps, any one of which can break the chain in an individual tumor.
+<!-- → [DIAGRAM: neoantigen generation and central tolerance — left panel: thymic education deleting self-reactive T cells (self-peptide/MHC → T cell deletion); center: a somatic mutation in a tumor cell producing a novel peptide; right: the novel peptide presented on MHC class I, recognized by a non-deleted T cell. Annotate: no tolerance to this peptide, T cell survives to respond.] -->
 
-**Reasoning — second attempt.** The team stops asking "are there targets?" and walks the cancer–immunity cycle link by link. Step 1–2 (antigen capture, dendritic-cell migration): intact. Step 3 (priming): intact — both patients have circulating tumor-reactive T cells, so priming happened. Step 4 (trafficking): here the difference appears. Tumor A is densely infiltrated with CD8+ T cells in contact with cancer cells. Tumor B has plenty of T cells stacked at its margin but almost none inside — an **excluded** phenotype. The T cells are present, primed, and competent; they simply cannot reach the cancer cells, blocked by dense matrix and an abnormal vasculature that fails to display the right chemokines.
+---
 
-**Resolution.** Tumor B is resistant not because it lacks targets but because it lacks *access*. The relevant lesion is in step 4 (trafficking and infiltration), not in antigen supply. A therapy that only releases T-cell brakes will do little for B, because the brakes were never the limiting problem — the limiting problem is a wall.
+### The chain from recognition to killing
 
-**The lesson.** Immune control is a chain of sequential steps; the limiting step, not the average potential, decides the outcome. Find the broken link before choosing the intervention.
+An effective adaptive anti-tumor response runs through a sequence of linked steps. Chen and Mellman drew this as the *cancer-immunity cycle* in 2013, and it is the most useful framework for understanding both how the response works and where it breaks.
 
-**The limit.** Identifying the excluded phenotype tells you *where* the chain breaks, not *how* to fix it. Converting an excluded "cold" tumor into an infiltrated "hot" one remains only partly solved, and which combination accomplishes it for a given patient is unsettled [contested — see pantry flag].
+The cycle opens when cancer cells die — from spontaneous apoptosis, from therapy, from necrosis — and release antigens into the tumor microenvironment. **Dendritic cells** take up the debris, process it, and load peptide fragments onto MHC class I (for CD8+ T cells) and MHC class II (for CD4+ T cells).
 
-## Common Misconceptions
+The dendritic cell then migrates to a draining lymph node and matures — upregulating its MHC molecules, its co-stimulatory ligands CD80 and CD86, and its cytokine production. In the lymph node it presents to naïve T cells. Activation requires two signals in parallel: the T-cell receptor binding the antigen–MHC complex (signal 1), and co-stimulation through CD28 binding CD80 or CD86 (signal 2). A T cell that receives signal 1 without signal 2 does not become activated — it becomes anergic, functionally silenced. IL-12 and other cytokines from the dendritic cell provide a third signal that shapes the character of the response.
 
-**"A strong immune system simply prevents cancer, so people who get cancer must have weak immune systems."** Plausible, and partly true — immunocompromised people do get more cancer. But immunoediting shows the relationship is not a simple strong/weak axis. A perfectly competent immune system can hold a tumor in equilibrium for years and still lose, because immune *pressure* selects for immune *evasion*. The donor in the opening case was not immunodeficient; her immune system was containing the melanoma successfully for fifteen years. The cancer escaped not because surveillance was weak but because surveillance was strong enough to edit the tumor toward invisibility. Strength and eventual failure are not opposites here.
+Activated T cells expand enormously — a single antigen-specific clone can produce thousands of daughters — and then follow chemokine gradients out of the lymph node and toward the tumor. CXCL9, CXCL10, and CXCL11, produced in the tumor, guide them in. At the tumor, CTLs bind cancer cells displaying their specific antigen on MHC class I and kill through two mechanisms: **perforin/granzyme** (the CTL releases pore-forming proteins and apoptosis-inducing enzymes into the cancer cell) and **death-receptor ligation** (FasL on the CTL binds Fas on the cancer cell, triggering apoptosis). A single CTL can kill multiple targets sequentially before dying itself. A subset of activated T cells survives as long-lived memory cells, poised to respond faster to a second exposure.
 
-**"Cancer cells look like normal cells, so the immune system can't tell them apart — that's why cancer grows."** This conflates two different things. Many cancer cells *do* display recognizably abnormal antigens — especially neoantigens from mutations, which are genuinely foreign. The problem in an escaped tumor is usually not that there is nothing to see but that the tumor has actively suppressed the seeing: downregulated MHC, recruited regulatory cells, engaged checkpoint brakes. The transplant case is the cleanest disproof — the cells were the same; only the surveillance was removed, and the cancer grew.
+<!-- → [DIAGRAM: the cancer-immunity cycle as a loop — six labeled steps: (1) antigen release from dying tumor cells; (2) dendritic cell uptake and MHC loading; (3) DC migration to lymph node, maturation, T-cell priming (signal 1 + signal 2 both required); (4) T-cell expansion and trafficking via CXCL9/10/11; (5) tumor infiltration; (6) CTL killing via perforin/granzyme and FasL/Fas. Annotate each step with one way a tumor can break it.] -->
 
-**"More mutations always means a more immune-visible, more treatable tumor."** Tumor mutational burden correlates with neoantigen load and, on average, with immune visibility — but the worked example shows why "always" fails. TMB sits at the top of a long chain. A high-TMB tumor that excludes T cells, or downregulates MHC, or saturates checkpoints, can be more immune-resistant than a lower-TMB tumor with an open, infiltrated microenvironment. TMB is a useful population-level predictor, not a guarantee for the individual.
+The chain is robust when intact, but each link is a place a tumor can sever it. Defective antigen processing breaks step 2. Failure to mature dendritic cells breaks step 3. Absence of chemokine expression breaks step 4. Dense matrix and abnormal vasculature block step 5. Checkpoint ligand expression suppresses the CTL in step 6. The cancer-immunity cycle is the map of the battleground.
+
+---
+
+### When T cells are not enough: NK cells and missing-self recognition
+
+CD8+ T cells are the primary adaptive killers, but they have a vulnerability: they require antigen presentation on MHC class I. A tumor that downregulates MHC — and many do, because it hides cancer-specific peptides from T cells — has found a way to become invisible to CTLs. It has also, in doing so, set a trap for itself.
+
+**Natural killer (NK) cells** patrol for cells that have downregulated MHC class I. The mechanism is **missing-self recognition**: NK cells express inhibitory receptors (KIRs and NKG2A) that are normally engaged by MHC class I on healthy cells, sending a "do not kill" signal. When MHC is absent or reduced, that inhibitory signal is lost, and the NK cell defaults to killing. A tumor that hides from T cells by removing MHC has simultaneously removed the brake on NK-cell attack. This is not a coincidence of design — it is precisely the kind of cross-monitoring that makes immune evasion harder.
+
+NK cells also recognize cells displaying stress ligands — MICA, MICB, and the ULBP family — which are expressed on transformed cells in response to genotoxic stress, replication errors, and oncogene activation. These ligands signal through NKG2D on NK cells (and on some CTLs) to trigger killing independently of antigen presentation.
+
+The practical consequence for therapy is direct: a treatment strategy based on potentiating T-cell killing will be insufficient in a tumor that has lost MHC class I. The limiting effector for that tumor is the NK cell, and the relevant question shifts from "how do we present antigen better" to "how do we activate NK cells in the tumor microenvironment."
+
+---
+
+### The broken link that predicts failure
+
+The worked example in the source material for this chapter describes two patients: one whose tumor responds to checkpoint-releasing therapy and one whose does not, despite having *higher* tumor mutational burden. The resolution is that the second tumor is not failing because it lacks targets — it is failing because it has excluded T cells physically. The cells are present in the blood and at the tumor margin; they simply cannot penetrate. Dense matrix and aberrant vessels form a wall between the immune infiltrate and the cancer cells.
+
+This is worth dwelling on because it illustrates the central mistake in applying population-level correlations to individual patients. TMB predicts response on average because, on average, more mutations mean more targets, and more targets mean more T-cell priming. But TMB is the input to a chain, and the chain has six links. A tumor can have abundant targets and still fail because dendritic cells are dysfunctional, or because the vasculature does not express the right trafficking chemokines, or because the matrix is impenetrable, or because checkpoints are saturated once T cells do arrive. The limiting step in the chain — not the average potential — decides the outcome. Finding the broken link in a specific patient requires walking the cycle, not reading a single number.
+
+The immunotherapy revolution of the last decade — checkpoint blockade — worked where it worked by releasing step 6: removing an inhibitory signal on a T cell that was already present, primed, and blocked from firing. The tumors that respond best are ones in which the only broken link was the checkpoint brake. The tumors that do not respond have broken links elsewhere in the cycle, and releasing a brake does nothing for a chain that is already cut upstream.
+
+---
 
 ## Exercises
 
-1. **(Recall/Understand.)** State the three phases of cancer immunoediting and give one line of evidence for each. For the equilibrium phase, explain why the opening case (donor-derived melanoma) is specifically evidence *for* equilibrium rather than for elimination or escape.
+**Warm-up**
 
-2. **(Apply.)** For each of the following antigens, name the normal tissue (if any) that shares the target and predict the on-target toxicity of an immune response against it: (a) HPV E7, (b) CD19, (c) tyrosinase, (d) HER2, (e) a private neoantigen from a missense mutation. Rank them from cleanest target to most dangerous and justify the ranking.
+1. *(Recall — difficulty: low)* State the three phases of cancer immunoediting and give one piece of evidence for each phase. For the equilibrium phase specifically, explain why the donor-derived melanoma case is evidence for equilibrium rather than for elimination. *What this tests: whether you can distinguish the three phases and use the chapter's central case correctly.*
 
-3. **(Apply+.)** A tumor has high mutational burden but does not respond to brake-releasing immunotherapy. Walk through the cancer–immunity cycle and propose three distinct mechanistic explanations, each located at a *different* step of the cycle. For each, state one observation (something you could measure on a biopsy or blood sample) that would confirm or rule it out.
+2. *(Recall — difficulty: low)* For each of these antigens — HPV E7, CD19, tyrosinase, HER2, a private neoantigen — name the normal tissue that shares the target (if any) and predict the on-target toxicity of a therapeutic immune response against it. *What this tests: the TSA vs. TAA distinction applied to specific clinical targets.*
 
-4. **(Produce.)** Design a one-page decision aid for a tumor board that takes a tumor's immune phenotype as input ("hot/infiltrated," "excluded," "cold/desert") and outputs the most likely *limiting step* in the cancer–immunity cycle plus the category of intervention that addresses it. Include at least one place where your aid should say "uncertain — needs more data" rather than giving an answer.
+3. *(Recall — difficulty: low)* Why does a tumor that downregulates MHC class I to evade CD8+ T cells expose itself to NK-cell killing? Name the recognition mechanism NK cells use and the specific molecular event that removes the "do not kill" signal. *What this tests: missing-self recognition as the complement to MHC-restricted surveillance.*
 
-5. **(Apply.)** A tumor evades CD8+ T cells by downregulating MHC class I. Explain why this strategy is double-edged, name the innate effector it exposes the tumor to, and describe the recognition mechanism that effector uses.
+**Application**
 
-## What Would Change My Mind
+4. *(Apply — difficulty: medium)* A high-TMB tumor does not respond to a checkpoint inhibitor. Walk through the cancer-immunity cycle and propose three mechanistically distinct explanations — each located at a different step — for why the response fails despite abundant neoantigens. For each explanation, name one measurement on a biopsy or blood sample that would confirm or rule it out. *What this tests: cycle-based mechanistic reasoning and the limits of TMB as a predictor.*
 
-The central claim of this chapter is that immunoediting — immune pressure selecting tumors toward evasion — is a real and general driver of the cancer the immune system fails to contain, not merely a description of immunodeficiency. The cleanest finding that would force a revision: a large, prospective study of immunocompetent patients showing that the tumors which eventually escape are *not* enriched for immune-evasion features (intact MHC, no checkpoint-ligand upregulation, no antigen loss relative to early lesions) compared with tumors held in equilibrium — in other words, evidence that escaped tumors are no more "edited" than contained ones. If escape turned out to be unrelated to acquired immune-evasion phenotypes, the editing model would lose its core mechanistic content and reduce to a restatement that immunodeficiency raises cancer risk.
+5. *(Apply — difficulty: medium)* A T cell in the thymus encounters a peptide derived from tyrosinase (a normal melanocyte protein) displayed on MHC class I. What happens to this T cell, and why? Now suppose a point mutation in a melanoma cell produces a novel peptide adjacent to the tyrosinase peptide sequence. Does the same mechanism apply to a T cell that recognizes the mutant peptide? Explain the difference in terms of central tolerance. *What this tests: the mechanistic basis for why neoantigens are preferential targets.*
 
-## Still Puzzling
+6. *(Apply — difficulty: medium)* A cancer cell in equilibrium has been held in check for eight years. Propose three distinct mechanisms by which it could acquire escape — one involving antigen presentation, one involving the co-stimulatory signal, and one involving the effector phase. For each, name the specific molecular change in the cancer cell or the microenvironment. *What this tests: mechanistic specificity about how each phase of the cycle can be broken.*
 
-- How long can a human tumor genuinely persist in equilibrium, and what tips a stable equilibrium into escape? The transplant cases prove decades are possible, but the trigger remains obscure.
-- Why do some tumors with abundant neoantigens still fail to prime any detectable T-cell response, even before evasion mechanisms engage? Is the failure in antigen processing, dendritic-cell function, or something we have not named?
-- Tumor mutational burden predicts response on average, yet individual high-TMB tumors fail and some low-TMB tumors respond. What additional features (clonality of neoantigens? the specific MHC alleles a patient carries?) would convert a population-level correlation into an individual-level prediction? This is genuinely unsettled.
+**Synthesis**
 
-## References
+7. *(Synthesize — difficulty: high)* Draw or describe the immunoediting framework as an evolutionary process. Show how the elimination phase applies selection pressure that enriches for immune-evasion phenotypes, and explain why the tumor that escapes is almost by definition a more edited, less visible version of its ancestors. Then connect this to the neoantigen concept: if neoantigens are the targets immune pressure selects against, what does a high-TMB escaped tumor reveal about the relationship between mutation load and antigen visibility? *What this tests: integration of immunoediting, selection pressure, and neoantigen biology as a single evolutionary argument.*
 
-- Burnet, F. M. (1970). The concept of immunological surveillance. *Progress in Experimental Tumor Research*, 13, 1–27.
-- Chen, D. S., & Mellman, I. (2013). Oncology meets immunology: the cancer-immunity cycle. *Immunity*, 39(1), 1–10.
-- Chen, Y.-T., et al. (1997). A testicular antigen aberrantly expressed in human cancers detected by autologous antibody screening (NY-ESO-1). *Proceedings of the National Academy of Sciences*, 94(5), 1914–1918.
-- Dunn, G. P., Bruce, A. T., Ikeda, H., Old, L. J., & Schreiber, R. D. (2002). Cancer immunoediting: from immunosurveillance to tumor escape. *Nature Immunology*, 3(11), 991–998.
-- Shankaran, V., Ikeda, H., Bruce, A. T., et al. (2001). IFNγ and lymphocytes prevent primary tumour development and shape tumour immunogenicity. *Nature*, 410(6832), 1107–1111.
-- Ehrlich, P. (1909). Ueber den jetzigen Stand der Karzinomforschung. *Nederlandsch Tijdschrift voor Geneeskunde*, 5, 273–290.
+8. *(Synthesize — difficulty: high)* A patient has a tumor classified as "excluded" — abundant T cells at the margin, almost none inside. Using the cancer-immunity cycle, identify which step is broken and which are intact. Then: (a) explain why checkpoint blockade alone is unlikely to be sufficient, and (b) propose a two-part combination strategy that addresses both the exclusion problem and a second likely broken link in the same tumor type. Justify each arm mechanistically. *What this tests: step-specific diagnosis of immune failure and combination logic.*
 
-## Prompts
+**Challenge**
 
-<!-- This section is populated automatically by the Cowork enrichment
-     pass. Each D3 figure generated in this chapter gets an entry here:
-     the figure number, a short title, and a ready-to-paste prompt
-     that produces a close approximation of that figure.
-
-     Prerequisites: paste CLAUDE.md and DESIGN.md from the brutalist/
-     folder before each prompt, or load them into your Claude project
-     context once and reference them by name.
--->
-
-*No figures have been generated for this chapter yet.*
+9. *(Challenge — difficulty: high)* Design a hypothetical personalized vaccine strategy for a patient with a high-TMB microsatellite-instability-high colorectal cancer. Specify: (a) how you would identify target neoantigens, (b) what formulation or delivery approach would most effectively prime dendritic cells, (c) what co-treatment would address the most likely step-specific failure you would anticipate in this tumor type, and (d) what you would measure at weeks 4, 8, and 16 to determine whether each step of the cycle is functioning. Identify the single biggest unknown in your design and what clinical data would resolve it. There is no single correct answer; mechanistically coherent reasoning with honest acknowledgment of limits is the goal. *What this tests: integrative design across the full cancer-immunity cycle, connecting antigen biology, dendritic cell priming, T-cell trafficking, and measurement strategy.*
